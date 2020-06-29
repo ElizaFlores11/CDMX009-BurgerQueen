@@ -1,0 +1,256 @@
+@import 'General'; 
+@import 'Header';
+@import 'Kitchen'; 
+@import 'ListOrder'; 
+@import 'Modal'; 
+body{
+    margin: $margin-body;
+    padding: $padding-body;
+    background-color: $background-body;
+}
+header{
+    background-color: $color-header;
+    width: $width-header;
+    height: $height-header;
+    color: $white;
+    position: $position-header; 
+    top: $top-header;
+    left: $left-header;
+    display: $display-kitchen; 
+    flex-direction: $direction-kitchen;
+    justify-content: $justify-kitchen;
+    
+    
+    .title-header{
+        font-family: $font-header;
+        font-style: $style;
+        font-weight: $weight;
+        text-align: $text-align-center;
+    }
+}
+.div-header1{
+    width: 70%;
+}
+.div-header2{
+    width: 30%;
+    text-align: $text-align-center;
+    padding: 30px;;
+}
+.container{
+    margin: $margin-container; 
+    width: $width-container;
+    height: $height-container;
+    margin-top: $margin-container-top;
+
+}
+.title-kitchen{
+    font-family: $general-font;
+    font-size: $title-size; 
+    font-style: $style;
+    font-weight: $weight;
+    text-align: $text-align-center;
+}
+.container-kitchen{
+    display: $display-kitchen; 
+    flex-direction: $direction-kitchen;
+    justify-content: $justify-kitchen;
+    flex-wrap: $wrap-kitchen;
+}
+.card-padding{
+ padding-left: $card-padding;
+ width: 50%; 
+}
+.card-active{
+    width: $card-width;
+    height: $card-height; 
+    top: $card-top; 
+    background-color: $background-active;
+    h4{
+        text-align: $text-align-center;
+    }
+}
+
+.list-source{
+    display: $display-kitchen;
+    flex-direction: $display-kitchen;
+    justify-content: $justify-kitchen;
+    flex-wrap: $wrap-kitchen;
+    
+}
+.item1-card{
+    width: $item1-width;
+    font-size: $item-size;
+    padding-left: $item-padding;
+
+}
+.item2-card{
+    width: $item2-width;
+    font-size: $item-size;
+    text-align:  $text-align-center;
+}
+.item3-card{
+    width: $item3-width;
+    font-size: $item-size;
+    text-align:  $text-align-center;
+}
+.button-red{
+    background-color: $red;
+    border-radius: $button-radius;
+    border-color: $red;
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $general-font;
+}
+.button-green{
+    background-color: $green;
+    border-radius: $button-radius;
+    border-color: $green;
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $general-font;
+}
+
+.button-gray{
+    background-color: $gray;
+    border-radius: $button-radius;
+    border-color: $gray;
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $general-font;
+}
+
+.item2-widtn-kitchem{
+    width: 50%;
+    right: $right;
+    position: $position-header; 
+    top: $top-delivery; 
+    text-align: $text-align-center; 
+}
+.headerList{
+    display: $display-kitchen;
+    flex-direction: $direction-kitchen;
+    justify-content: $justify-kitchen;
+    flex-wrap: $wrap-kitchen;
+}
+.titulo-list{   
+    width: $width-title;
+    height: $height-title; 
+    top: $card-top; 
+    background-color: $light-blue;
+    text-align: center;
+    font-family: $general-font;
+    font-style: $style;
+    font-weight:  $weight;
+    font-size: 20px; 
+}
+.list{   
+    width: $width-title;
+    height: $height-title; 
+    top: $card-top; 
+    background-color: $white;
+    text-align: $text-align-center;
+    font-family: $general-font;
+    font-style: $style;
+    font-weight:  $weight;
+    font-size: 15px; 
+}
+
+.list-green{
+    width: $width-status-list;
+    background-color: $green;
+    border-radius: $button-radius;
+    border-color: $green;
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $general-font;
+    font-size: 20px;
+}
+
+.list-orange{
+    width: $width-status-list;
+    background-color: $orange;
+    border-radius: $button-radius;
+    border-color: $green;
+    font-weight: $weight;
+    font-style: $style;
+    font-family: $general-font;
+    font-size: 20px;
+}
+
+.list-edit{   
+    width: $width-title;
+    height: $height-title; 
+    top: $card-top; 
+    background-color: $white;
+    text-align: $text-align-center;
+    font-family: $general-font;
+    font-style: $style;
+    font-weight:  $weight;
+}
+
+.container-list{
+    margin: $margin-container; 
+    width: $container-list-width;
+    height: $height-container;
+    margin-top: $margin-container-top;
+
+}
+.container-list-edit{
+    margin: $margin-container; 
+    width: $continer-list-edit-width;
+    height: $height-container;
+    margin-top: $margin-container-top;
+
+}
+.modal-contenido{
+    background-color:$white; 
+    width: $modal-width;
+    padding: $modal-padding;
+    margin: $modal-margin;
+    position: $modal-relative;
+    height: $modal-height;
+    overflow: $modal-overflow;
+
+  }
+  .modal{
+    background-color: $modal-trasparent;
+    position: $modal-fixed;
+    top: $modal-top;
+    right: $modal-right;
+    bottom: $modal-bottom;
+    left: $modal-left;  
+  }
+  .title-list{
+    font-family: $general-font;
+    font-size: $size-title; 
+    font-style: $style;
+    font-weight: $weight;
+    text-align: $text-align-center;
+}
+.right{
+    color: $color-gray;
+    line-height: $line-height;
+    font-size: $font-size-c;
+    right: $modal-right;
+    text-align: $text-align-center;
+    top: $modal-top;
+    width: $width-c;
+    text-decoration: $text-decoration;
+    &:hover {
+      color: $color-black;
+    }
+}
+.modal-close {
+    position: $absolute;
+    color: $color-gray;
+    line-height: $line-height;
+    font-size: $font-size-c;
+    right: $modal-right;
+    text-align: $text-align-center;
+    top: $modal-top;
+    width: $width-c;
+    text-decoration: $text-decoration;
+    &:hover {
+      color: $color-black;
+    }
+  }

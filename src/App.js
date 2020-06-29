@@ -1,12 +1,22 @@
-import React, { Fragment } from 'react';
-import './App.css';
-
+import React, { Fragment, useState } from 'react';
+import './Styles/Styles.scss'; 
+import Header from './Componets/Header'; 
+import GeneralKitchen from './Componets/Kitchen/GeneralKitchen'; 
+//import GeneralOrderList from './Componets/Kitchen/GeneralOrderList'; 
+//import GeneralEditListOrder from './Componets/Kitchen/GeneralEditListOrder'
 function App() {
+ /*
+  <GeneralOrderList />
+        <br/><br/>
+    <GeneralEditListOrder />
+ */
   return (
     <Fragment>
-      <h1>Hola Mundo</h1>
-    </Fragment>
-  );
+      <Header />
+     <br/>
+     <GeneralKitchen />
+     </Fragment>
+     ); 
 }
 
 export default App;
