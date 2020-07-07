@@ -5,17 +5,17 @@ const DeliveredOrder = ({deliveredOrder, saveDeliveryOrder}) => {
     
     return(
     <div className='item2-widtn-kitchem' >
-        { deliveredOrder.length == 0 
+        { deliveredOrder.length != 0 
         ? 
-            <p>No se han entregado ordenes</p>
-        :
             deliveredOrder.map(orders =>(
                 <Kitchen 
-                    key= {orders.idorders}
+                    key= {orders.id}
                     orders = {orders}
                  />
                 )
             )
+        : 
+        null
         }
     </div>
     )

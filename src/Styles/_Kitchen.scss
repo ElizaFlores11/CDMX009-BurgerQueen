@@ -4,18 +4,20 @@ $justify-kitchen: flex-start;
 $wrap-kitchen: wrap;  
 
 $absolute: absolute; 
-$card-width: 300px;
-$card-height: 350px; 
+$card-width: 350px;
+$card-height: auto; 
 $card-top: 227px; 
-$background-active: #F8F1F1; 
-$background-inactive: #E4E8DC; 
+$background-active: #3824A0 ; 
+$background-inactive: #AEA1F4; 
 $card-border: 40px;  
-
+$bordercolor: 5px solid #10ABE0; 
 $list-sourcer: 100%;
- 
+$border-radius: 40px; 
+$font-size-card: 30px; 
+$color-inactive:  #726B6B;; 
 
 $item-padding:10px; 
-$item-size: 15px; 
+$item-size: 20px; 
 
 $item1-width: 70%;
 $item2-width: 20%;
@@ -25,6 +27,7 @@ $card-padding: 40px;
 
 /** Maquetado de Ordernes Entregagas*/
 $right: 0px;
-$top-delivery: 222px; 
+$top-delivery: 120px; 
 $pfixed: fixed; 
 
+$button-width: 100px

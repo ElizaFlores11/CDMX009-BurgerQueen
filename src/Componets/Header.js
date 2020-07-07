@@ -1,5 +1,5 @@
 import React, {useState}  from 'react'; 
-import Modal from './Kitchen/Modal';
+import Modal from './Kitchen/Modal/Modal';
 const Header = () =>{
     const [listModal, updateModal]=useState(false); 
     const showModal = (m) =>{

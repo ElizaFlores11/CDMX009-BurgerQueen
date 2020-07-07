@@ -20,21 +20,21 @@ header{
     flex-direction: $direction-kitchen;
     justify-content: $justify-kitchen;
     
-    
     .title-header{
         font-family: $font-header;
         font-style: $style;
-        font-weight: $weight;
+        font-weight: $font-bold;
         text-align: $text-align-center;
+        font-size: $font-size-header;
     }
 }
 .div-header1{
-    width: 70%;
+    width: 80%;
 }
 .div-header2{
-    width: 30%;
+    width: 20%;
     text-align: $text-align-center;
-    padding: 30px;;
+    padding: 40px;;
 }
 .container{
     margin: $margin-container; 
@@ -65,11 +65,26 @@ header{
     height: $card-height; 
     top: $card-top; 
     background-color: $background-active;
+    color: $white; 
     h4{
         text-align: $text-align-center;
     }
+    border: $bordercolor;
+    border-radius: $border-radius;
+    font-size: $font-size-card;
 }
-
+.card-inactive{
+    width: $card-width;
+    height: $card-height; 
+    top: $card-top; 
+    background-color: $background-inactive;
+    color: $color-inactive; 
+    h4{
+        text-align: $text-align-center;
+    }
+    border-radius: $border-radius;
+    font-size: $font-size-card;
+}
 .list-source{
     display: $display-kitchen;
     flex-direction: $display-kitchen;
@@ -100,6 +115,8 @@ header{
     font-weight: $weight;
     font-style: $style;
     font-family: $general-font;
+    color: $white; 
+    width: $button-width;
 }
 .button-green{
     background-color: $green;
@@ -108,6 +125,8 @@ header{
     font-weight: $weight;
     font-style: $style;
     font-family: $general-font;
+    color: $white; 
+    width: $button-width;
 }
 
 .button-gray{
@@ -117,6 +136,8 @@ header{
     font-weight: $weight;
     font-style: $style;
     font-family: $general-font;
+    color: $white;
+    width: $button-width; 
 }
 
 .item2-widtn-kitchem{
@@ -131,28 +152,43 @@ header{
     flex-direction: $direction-kitchen;
     justify-content: $justify-kitchen;
     flex-wrap: $wrap-kitchen;
+    border-radius: $diez-pixeles;
+    background-color: $azul-ligh;
+    color: $color-black; 
 }
 .titulo-list{   
     width: $width-title;
     height: $height-title; 
-    top: $card-top; 
-    background-color: $light-blue;
-    text-align: center;
+    //top: $card-top; 
+    //background-color: $light-blue;
+    padding-top: $diez-pixeles;
+    text-align: $text-align-center;
     font-family: $general-font;
     font-style: $style;
     font-weight:  $weight;
-    font-size: 20px; 
+    font-size: $veinte-pixeles; 
+}
+.contentList{
+    display: $display-kitchen;
+    flex-direction: $direction-kitchen;
+    justify-content: $justify-kitchen;
+    flex-wrap: $wrap-kitchen;
+    background-color: $transparente;
 }
 .list{   
     width: $width-title;
     height: $height-title; 
     top: $card-top; 
-    background-color: $white;
     text-align: $text-align-center;
     font-family: $general-font;
     font-style: $style;
     font-weight:  $weight;
     font-size: 15px; 
+    color: $white; 
+    
+}
+.icono{
+     color: red; 
 }
 
 .list-green{
@@ -163,7 +199,7 @@ header{
     font-weight: $weight;
     font-style: $style;
     font-family: $general-font;
-    font-size: 20px;
+    font-size: $veinte-pixeles;
 }
 
 .list-orange{
@@ -174,12 +210,12 @@ header{
     font-weight: $weight;
     font-style: $style;
     font-family: $general-font;
-    font-size: 20px;
+    font-size: $veinte-pixeles; 
 }
 
 .list-edit{   
     width: $width-title;
-    height: $height-title; 
+    height: $auto; 
     top: $card-top; 
     background-color: $white;
     text-align: $text-align-center;
@@ -203,7 +239,7 @@ header{
 
 }
 .modal-contenido{
-    background-color:$white; 
+    background-color: $background-body; 
     width: $modal-width;
     padding: $modal-padding;
     margin: $modal-margin;
@@ -242,7 +278,7 @@ header{
 }
 .modal-close {
     position: $absolute;
-    color: $color-gray;
+    color: $color-black;
     line-height: $line-height;
     font-size: $font-size-c;
     right: $modal-right;
