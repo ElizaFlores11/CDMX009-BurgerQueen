@@ -2,51 +2,28 @@ import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom'; 
 import Pending from '../State/Pending';
 import Ready from '../State/Ready';
-import { db } from '../../../Firebase/firebase'; 
+import { db } from '../../../Firebase/firebase-config'; 
 
 
 const Modal = ({onClose}) => {
            //Ejemplo de ordern 
   const [pending, changePending] = useState([]);
   useEffect(()=> {
-    const getPending = async () =>{
-      try{
-        const data = await db
-        .collection("orders").where('state', '==', 'pending') 
-        .get(); 
-        const arrayPending = data.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-          //doc.id; 
-        }));
-        //console.log(getD); 
-        changePending(arrayPending); 
-        //console.log(arrayData)
-      }catch (error){
-        console.log(error); 
-      }
-    };
-     getPending();
+    const goPending = db.collection('orders').where('state', '==','pending').orderBy('date', 'desc'); 
+    return goPending.onSnapshot(snapshotPending => {
+      const pendingData = []
+      snapshotPending.forEach(doc => pendingData.push({ ...doc.data(), id: doc.id})); 
+      changePending(pendingData); 
+    });   
   }, []); 
   const [ready, changeReady] = useState([]);
   useEffect(()=> {
-    const getReady = async () =>{
-      try{
-        const data = await db
-        .collection("orders").where('state', '==', 'ready') 
-        .get(); 
-        const arrayReady = data.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        //console.log(getDR); 
-        changeReady(arrayReady); 
-        //console.log(arrayData)
-      }catch (error){
-        console.log(error); 
-      }
-    };
-     getReady();
+    const goReady = db.collection('orders').where('state', '==','ready').orderBy('date', 'desc'); 
+    return goReady.onSnapshot(snapshotReady => {
+      const readyData = []
+      snapshotReady.forEach(doc => readyData.push({ ...doc.data(), id: doc.id})); 
+      changeReady(readyData); 
+    }); 
   }, []);
 
     const done = (

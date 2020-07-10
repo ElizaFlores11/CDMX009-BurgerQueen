@@ -1,5 +1,5 @@
 import React from 'react';
-import { db } from '../../../Firebase/firebase';
+import { db } from '../../../Firebase/firebase-config';
 
 const Pending = ({ pendings, pending,  changePending}) => {
     

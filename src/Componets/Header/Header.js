@@ -1,5 +1,5 @@
 import React, {useState}  from 'react'; 
-import Modal from './Kitchen/Modal/Modal';
+import Modal from '../Kitchen/Modal/Modal';
 const Header = () =>{
     const [listModal, updateModal]=useState(false); 
     const showModal = (m) =>{
@@ -12,7 +12,9 @@ const Header = () =>{
     return (
     <header>
         <div className='div-header1' >
-        <h1 className='title-header'> Burger Queen</h1>
+        <h1 className='title-header'> 
+            Burger Queen
+        </h1>
         </div>
         <div className='div-header2' >
         <a>  

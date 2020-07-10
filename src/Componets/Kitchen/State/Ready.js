@@ -1,4 +1,6 @@
 import React from 'react';
+import { db } from '../../../Firebase/firebase-config';
+
 
 const Ready = ({ readys, ready,  changeOrderReady}) => {
     const {date, deliveryDate, table, state, id} = readys
@@ -8,6 +10,18 @@ const Ready = ({ readys, ready,  changeOrderReady}) => {
     let min = Math.floor(timeDifference / 60); 
     //let seg = (min * 60);  
     //let segfinish = (seg / 60); 
+    const Entregado=(i) => {
+        console.log(id); 
+        let onchangeState = db.collection("orders").doc(id);
+          onchangeState.update({
+            "state": "delivered"
+            }).then(function() {
+                //alert("Registro cancelado exitosamente");
+        
+            }).catch(function(error) {
+                console.error("Error updating document: ", error);
+            });
+    }
     return (
         <div >
             <div className='contentList' >
@@ -23,6 +37,7 @@ const Ready = ({ readys, ready,  changeOrderReady}) => {
                     </p> 
                 </div>
                 <div className='list'>
+                    <button className='button-red' type="button" onClick={()=> Entregado(id)}>Entregado</button>
                 </div>
             </div>
         </div>
