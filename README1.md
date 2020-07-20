@@ -4,17 +4,37 @@
 
 Proyecto realizado con el Framework React, para un restaurante  esta divido  para dos perfiles 
 
+<img src="imgReadme/BG1.png" alt="Burguer Queen">
+
+<img src="imgReadme/BG9.png" alt="Burguer Queen">
+
 El perfil de mesero, se encuentra 
 en dos menus: 
-Desayunos
-Comidas.
+
+Desayuno
+
+<img src="imgReadme/BG3.png" alt="Burguer Queen">
+
+Comidas
+
+<img src="imgReadme/BG4.png" alt="Burguer Queen">
+
 
 Al seleccinar el platillo, se puede agregar algunoos aditamnetos y la cantidad requerida.
 
+<img src="imgReadme/BG5.png" alt="Burguer Queen">
+
+<img src="imgReadme/BG6.png" alt="Burguer Queen">
 
 En el perfil de cocina, se visualiza el listado de las ordenes y puede entregar o cancelar.
 
+
 Tambien se viusaliza el listado de las ordenes en una modal. Ya sean pendientes o que ya estan lista para los clientes y tambien se pueden quietar del listado 
+
+<img src="imgReadme/BG8.png" alt="Burguer Queen">
+
+<img src="imgReadme/BG7.png" alt="Burguer Queen">
+
 
 ### HTML y CSS
 
