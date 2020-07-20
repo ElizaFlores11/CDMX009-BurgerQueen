@@ -1,32 +1,23 @@
 import React from 'react';
-import { db } from '../../../Firebase/firebase-config';
+import { ordersSetDelivered } from '../../../Firebase/controls';
 
 
 const Ready = ({ readys, ready,  changeOrderReady}) => {
-    const {date, deliveryDate, table, state, id} = readys
+    
+    const { date, deliveryDate, table, state, id }= readys
+    
     const starTime = date; 
     const endTime = deliveryDate; 
     let timeDifference = (endTime) -(starTime); 
     let min = Math.floor(timeDifference / 60); 
-    //let seg = (min * 60);  
-    //let segfinish = (seg / 60); 
     const Entregado=(i) => {
-        console.log(id); 
-        let onchangeState = db.collection("orders").doc(id);
-          onchangeState.update({
-            "state": "delivered"
-            }).then(function() {
-                //alert("Registro cancelado exitosamente");
-        
-            }).catch(function(error) {
-                console.error("Error updating document: ", error);
-            });
+        ordersSetDelivered(id); 
     }
     return (
         <div >
             <div className='contentList' >
                 <div className='list'>
-                    {min} min
+                    {min} min 
                 </div>            
                 <div className='list'>
                     { table}

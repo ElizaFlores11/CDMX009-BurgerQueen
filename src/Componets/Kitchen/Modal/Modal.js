@@ -2,31 +2,22 @@ import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom'; 
 import Pending from '../State/Pending';
 import Ready from '../State/Ready';
-import { db } from '../../../Firebase/firebase-config'; 
+import { viewModalReady, viewModalPending } from '../../../Firebase/controls'; 
 
 
 const Modal = ({onClose}) => {
            //Ejemplo de ordern 
   const [pending, changePending] = useState([]);
   useEffect(()=> {
-    const goPending = db.collection('orders').where('state', '==','pending').orderBy('date', 'desc'); 
-    return goPending.onSnapshot(snapshotPending => {
-      const pendingData = []
-      snapshotPending.forEach(doc => pendingData.push({ ...doc.data(), id: doc.id})); 
-      changePending(pendingData); 
-    });   
+      viewModalPending(changePending)
   }, []); 
   const [ready, changeReady] = useState([]);
   useEffect(()=> {
-    const goReady = db.collection('orders').where('state', '==','ready').orderBy('date', 'desc'); 
-    return goReady.onSnapshot(snapshotReady => {
-      const readyData = []
-      snapshotReady.forEach(doc => readyData.push({ ...doc.data(), id: doc.id})); 
-      changeReady(readyData); 
-    }); 
+    viewModalReady(changeReady);
   }, []);
 
     const done = (
+  
         <div className='modal' >
             <div className='modal-contenido'>
                 <a><i className='fa fa-times icon-close modal-close' onClick={onClose}></i></a>
