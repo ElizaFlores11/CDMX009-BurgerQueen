@@ -1,5 +1,5 @@
 import React from 'react';
-import { db } from '../../../Firebase/firebase-config';
+import { onChangeStateCancel } from '../../../Firebase/controls';
 
 const Pending = ({ pendings, pending,  changePending}) => {
     
@@ -7,16 +7,9 @@ const Pending = ({ pendings, pending,  changePending}) => {
     const deletList = (id)  => {
         const newPending = pending.filter(pendings => pendings.id !== id); 
         changePending(newPending);
-        //console.log(id);  
-        let onchangeState = db.collection("orders").doc(id);
-          onchangeState.update({
-            "state": "cancel"
-            }).then(function() {
-                //alert("Registro cancelado exitosamente");
-        
-            }).catch(function(error) {
-                console.error("Error updating document: ", error);
-            }); 
+        //console.log(id);
+        onChangeStateCancel(id);
+
     }
     return (
         <div >

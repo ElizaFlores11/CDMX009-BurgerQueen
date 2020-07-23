@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { db } from '../../../Firebase/firebase-config'; 
-
+import { onChangeStateReady, onChangeStateCancel } from '../../../Firebase/controls'; 
+//import
 const Kitchen = ({orders, order, deliveredOrder, saveDeliveryOrder, listOrder}) =>{
     const {client, table, id, items, state} = orders
-
     const deliveredOrders =  (id) =>{
         const ordersf = order.filter(orders => orders.id === id)[0]; 
         saveDeliveryOrder ([
@@ -12,16 +11,7 @@ const Kitchen = ({orders, order, deliveredOrder, saveDeliveryOrder, listOrder}) 
             ]
         ); 
         deleteOrderslist(id);
-        let newDate = new Date; 
-        let onchangeState = db.collection("orders").doc(id);
-            onchangeState.update({
-                "state": "ready",
-                "deliveryDate": newDate    
-            }).then(function() {
-                //alert("Registro actualizado exitosamente");
-            }).catch(function(error) {
-                console.error("Error updating document: ", error);
-            });
+        onChangeStateReady(id); 
         }
         
         const deleteOrderslist = (id) =>{
@@ -35,15 +25,7 @@ const Kitchen = ({orders, order, deliveredOrder, saveDeliveryOrder, listOrder}) 
         listOrder(
             newOrder
         ); 
-        let onchangeState = db.collection("orders").doc(id);
-          onchangeState.update({
-            "state": "cancel"
-            }).then(function() {
-               // alert("Registro cancelado exitosamente");
-        
-            }).catch(function(error) {
-                console.error("Error updating document: ", error);
-            }); 
+        onChangeStateCancel(id); 
     }
     return (
         <div className='card-padding'>

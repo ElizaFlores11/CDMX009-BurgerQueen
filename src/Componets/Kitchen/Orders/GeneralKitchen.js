@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Kitchen from './Kitchen';
 import DeliveredOrder from './DeliveredOrder';
-import { db } from '../../../Firebase/firebase-config'; 
+import { viewOrders } from '../../../Firebase/controls'; 
 
 const  GeneralKitchen= () => {
   
@@ -9,12 +9,7 @@ const  GeneralKitchen= () => {
   const [deliveredOrder, saveDeliveryOrder] = useState([]);
 
   useEffect(()=> {
-    const d = db.collection('orders').where('state', '==','pending'); 
-    return d.onSnapshot(snapshot => {
-      const spellsData = []
-      snapshot.forEach(doc => spellsData.push({ ...doc.data(), id: doc.id})); 
-      listOrder(spellsData); 
-    }); 
+     viewOrders(listOrder); 
   }, []); 
   
   return (
