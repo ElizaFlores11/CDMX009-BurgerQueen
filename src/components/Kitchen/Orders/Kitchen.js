@@ -46,11 +46,9 @@ const Kitchen = ({ orders, order, deliveredOrder, saveDeliveryOrder, listOrder }
                                 <h5 key={index}>  {item.quantity} </h5>
                             </div>
                         </div>
-
-                    )
-                })}
+                    )})}
                 {order
-                    ?
+                    &&
                     <div className='list-source2'>
                         <div className='item3-card' >
                             <button
@@ -67,8 +65,6 @@ const Kitchen = ({ orders, order, deliveredOrder, saveDeliveryOrder, listOrder }
                         </div>
                         <br />
                     </div>
-                    :
-                    null
                 }
             </div>
             <br /><br />

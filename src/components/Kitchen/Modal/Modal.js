@@ -46,9 +46,7 @@ const Modal = ({ onClose }) => {
               pending={pending}
               changePending={changePending}
             />
-          )
-          )
-          }
+            ))}
           {ready.map((readys) => (
             <Ready
               key={readys.id}
@@ -56,9 +54,7 @@ const Modal = ({ onClose }) => {
               ready={ready}
               changeReady={changeReady}
             />
-          )
-          )
-          }
+            ))}
         </div>
       </div>
 

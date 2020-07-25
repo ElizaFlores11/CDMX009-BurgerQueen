@@ -28,13 +28,8 @@ const GeneralKitchen = () => {
             deliveredOrder={deliveredOrder}
             saveDeliveryOrder={saveDeliveryOrder}
             listOrder={listOrder}
-          />
-        )
-        )
-        }
+          />))}
       </div>
-
-
       <DeliveredOrder
         deliveredOrder={deliveredOrder}
         saveDeliveryOrder={saveDeliveryOrder}

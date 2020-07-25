@@ -74,13 +74,13 @@ Corre este comando cuando estés listo para desplegar la app a producción, se c
 - [X] Concepto
 - [X] Utilidad
 - [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
-- [ ] Qué es un `serviceWorker`
+- [x ] Qué es un `serviceWorker`
 
 ### Firebase
 
 - [X] Firestore
-- [ ] Firebase security rules
-- [ ] Observables
+- [x] Firebase security rules
+- [x] Observables
 
 ### Testing
 

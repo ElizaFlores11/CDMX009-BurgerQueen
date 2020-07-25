@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     const [listModal, updateModal] = useState(false);
-    const showModal = (m) => {
-        if (m === 'm') {
+    const showModal = (viewModal) => {
+        if (viewModal === 'viewModal') {
             updateModal(true);
             return
         }
@@ -24,15 +24,14 @@ const Header = () => {
             <div className='div-header2' >
 
                 <i className="fa fa-bell"
-                    onClick={() => showModal('m')}
+                    onClick={() => showModal('viewModal')}
                 > </i>
 
                 {listModal
-                    ?
+                    &&
                     (<Modal
                         onClose={() => updateModal(false)}
                     />)
-                    : null
                 }
             </div>
         </header>
